@@ -1,0 +1,402 @@
+/* Reset e configurações básicas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Header/Banner */
+.banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.logo img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.banner h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.banner p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner button {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.banner button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+}
+
+/* Main Content */
+main {
+  padding: 0;
+}
+
+/* Course Content Section */
+#course-content {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  text-align: center;
+}
+
+#course-content h2 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+#course-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+#course-content > p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.modules-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.module {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 5px solid #667eea;
+  text-align: left;
+}
+
+.module:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.module span {
+  color: #667eea;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.module:nth-child(2) {
+  border-left-color: #764ba2;
+}
+
+.module:nth-child(2) span {
+  color: #764ba2;
+}
+
+.module:nth-child(3) {
+  border-left-color: #ff6b6b;
+}
+
+.module:nth-child(3) span {
+  color: #ff6b6b;
+}
+
+/* Transform World Section */
+#transform-world {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#transform-world::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: float 20s infinite linear;
+}
+
+#transform-world p {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Professional Challenges Section */
+#professional-challenges {
+  padding: 5rem 2rem;
+  background: white;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#professional-challenges h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+#professional-challenges img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+#professional-challenges img:hover {
+  transform: scale(1.02);
+}
+
+#professional-challenges p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.dio-logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: brightness(1.2);
+}
+
+footer p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translateX(50px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+  
+  .banner p {
+    font-size: 1.1rem;
+  }
+  
+  .banner button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+  
+  #course-content h2 {
+    font-size: 2.2rem;
+  }
+  
+  #course-content > p {
+    font-size: 1.1rem;
+  }
+  
+  .modules-list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .module {
+    padding: 1.5rem;
+  }
+  
+  #transform-world p {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  
+  #professional-challenges h2 {
+    font-size: 2rem;
+  }
+  
+  #professional-challenges p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    min-height: 90vh;
+  }
+  
+  .banner-content {
+    padding: 1rem;
+  }
+  
+  .banner h1 {
+    font-size: 2rem;
+  }
+  
+  .banner p {
+    font-size: 1rem;
+  }
+  
+  #course-content,
+  #professional-challenges {
+    padding: 3rem 1rem;
+  }
+  
+  #transform-world {
+    padding: 3rem 1rem;
+  }
+  
+  #transform-world p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessibility improvements */
+button:focus,
+a:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .banner {
+    background: #667eea !important;
+    color: white !important;
+  }
+  
+  .banner::before {
+    display: none;
+  }
+}
+
